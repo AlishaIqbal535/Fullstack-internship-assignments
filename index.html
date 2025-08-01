@@ -3,98 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Landing Page</title>
+    <title>University Registration</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Student Registration</h1>
+        
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="rollNumber">Roll Number</label>
+                <input type="text" id="rollNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input type="text" id="department" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Upload Image</label>
+                <input type="file" id="image" accept="image/*" required>
+            </div>
+            <button type="submit">Register Student</button>
+        </form>
 
-    <header class="header">
-        <div class="logo">E-Commerce Store</div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <button id="openCartBtn">
-                Cart (<span id="cartItemCount">0</span>)
-            </button>
-        </nav>
-    </header>
+        <hr>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Welcome to Our Store</h1>
-                <p>Discover amazing products at unbeatable prices.</p>
-                <a href="#products" class="cta-button">Shop Now</a>
+        <h2>Registered Students</h2>
+        <div id="studentList">
             </div>
-        </section>
-
-        <section id="products" class="products-section">
-            <h2>Our Products</h2>
-            <div class="product-grid">
-                <div class="product-card" data-id="1" data-name="Wireless Mouse" data-price="25.00">
-                    <img src="images (1).jpeg" alt="Wireless Mouse">
-                    <h3>Wireless Mouse</h3>
-                    <p class="price">$25.00</p>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="product-card" data-id="2" data-name="Mechanical Keyboard" data-price="75.00">
-                    <img src="images (2).jpeg" alt="Mechanical Keyboard">
-                    <h3>Mechanical Keyboard</h3>
-                    <p class="price">$75.00</p>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="product-card" data-id="3" data-name="LED Monitor" data-price="150.00">
-                    <img src="images (3).jpeg" alt="LED Monitor">
-                    <h3>LED Monitor</h3>
-                    <p class="price">$150.00</p>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="cartSidebar" class="cart-sidebar">
-        <div class="cart-header">
-            <h3>Your Cart</h3>
-            <button id="closeCartBtn">&times;</button>
-        </div>
-        <div id="cartItems" class="cart-items">
-            </div>
-        <div class="cart-summary">
-            <div class="cart-total">
-                <strong>Total:</strong> <span id="cartTotal">$0.00</span>
-            </div>
-            <button id="checkoutBtn" class="checkout-btn">Checkout</button>
-        </div>
-    </div>
-
-    <div id="checkoutModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal-btn">&times;</span>
-            <div id="checkoutFormContainer">
-                <h3>Checkout</h3>
-                <form id="checkoutForm">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Address:</label>
-                        <textarea id="address" required></textarea>
-                    </div>
-                    <button type="submit">Place Order</button>
-                </form>
-            </div>
-            <div id="orderConfirmation" class="hidden">
-                <h2>Order Confirmed!</h2>
-                <p>Thank you for your purchase.</p>
-                <p>Your order will be processed shortly.</p>
-            </div>
-        </div>
     </div>
 
     <script src="script.js"></script>
